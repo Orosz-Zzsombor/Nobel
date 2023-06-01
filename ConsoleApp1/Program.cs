@@ -19,7 +19,7 @@ namespace ConsoleApp1
             Nobel.Where(x => x.VezetekNev.Contains("Curie")).GroupBy(x => x.KeresztNev).ToList().ForEach(x => Console.WriteLine($" {x.Key}"));
             Nobel.GroupBy(x => x.Tipus).ToList().ForEach(x => Console.WriteLine($"{x.Key}  {x.Count()}db"));
             StreamWriter sw = new StreamWriter("orvosi.txt", true);
-            Nobel.Where(x => x.Tipus == "orvosi").ToList().ForEach(x => sw.WriteLine(x))
+            Nobel.Where(x => x.Tipus == "orvosi").ToList().ForEach(x => sw.WriteLine(x));
         }
     }
 }
